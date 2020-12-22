@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&family=Merienda:wght@700&family=Pangolin&family=Turret+Road:wght@700&display=swap');
+* {/*l'étoile "*" permet de tout selectionner*/
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    
+}
+h1, nav, #texte_decale{
+    color: yellow;
+    justify-content: center;
+    font-family: 'Fondamento', cursive;
+}
+header{
+    position: fixed;
+    width: 100%;/*Ici on gère le header afin qu'il reste toujours en haut collé*/
+    height: 80px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+#logo{
+    width: 60%;
+}
+#menu-checkbox{
+    display: none;
+}
+.menu{
+    display:flex;
+    flex-direction: row;
+}
+
+#texte_decale{
+    font-weight: bold;/*On met le texte en gras*/
+    padding: 0; /*position texte dans le header*/
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+#texte_decale:hover ,.inter_image:hover{
+    color: rgb(55, 167, 211);/*Change la couleur du texte en bleu quand on passe dessus*/
+}
+#image_sous_header {
+    width: 100%;
+    margin-top: 0;
+    position: relative;
+    height: auto; 
+    background-color: black;   
+}
+
+#image_sous_header img {
+    width: 100%;
+    height: auto;
+    top: 0;
+}
+#texte{
+    display: flex;
+    justify-content: center;/*Centre le texte*/
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);/*Filtre sombre par dessus l'image*/
+    height: 99.5%;
+    width: 100%;
+    top: 0; 
+    flex-direction: column;/*Mettre le texte l'un au dessus de l'autre*/
+}
+h3{
+    margin-bottom: 30px;
+    font-size: 150px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 20px;
+    padding: 20px;
+}
+h3:hover{
+    background-color: white;
+    color: black;
+}
+
+#Newsletter {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+    background: url("./images/newsletter.jpg");
+
+    
+}
+
+.envoyer {
+    background-color:#f0f0f0;
+    border: 0;
+    padding: 10px 10px;/*On met une marge autour du texte "envoyer"*/
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-left: 170px;
+    font-size: 30px;
+    margin-top: 40px;
+}
+.envoyer:hover {
+    background-color: white;/*Le fond du bouton "envoyer" est blanc quand on passe dessus*/
+}
+
+
+#info_newsletter
+{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 50px;
+    border: none;
+    background-color: yellow ;
+    border-bottom: 1px solid black; /*On enlève le contour des "nom" et "email",et on met le trait en dessous en noir*/
+
+}
+#birth{
+    margin-left: auto;
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 80px;
+}
+select{
+    margin-left: 40px;
+    font-size: 30px;
+}
+#val{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+label{
+    font-size: 20px;
+}
+#one{
+    display: none;
+}
+#footer{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+p {
+    color: white;
+    text-align: center;
+}
+@media screen and (max-width:640px){
+    .header_icon{
+        position: relative;
+        display: block;
+        color: yellow;
+        margin-left: 50px;
+        width: 30px;
+        height: 25px;
+        vertical-align: middle;
+    }
+    header{
+        position: fixed;
+        height: 30px;
+        
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color:black;
+        border-radius: 0 0 20px 20px;
+        width: 200px;
+        height: 210px;
+        z-index: 2;
+        transform: translateX(-200px);
+    }
+    #texte_decale{
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        border-bottom: 1px solid  rgb(55, 167, 211) ;
+    }
+    #menu-checkbox{
+        display: none;
+    }
+    #menu-checkbox:checked ~ .menu{
+        transform: translateX(0PX);
+    }
+    #menu-checkbox:checked ~ .header_icon {
+        transform: translateX(150PX);
+    }
+    #logo{
+        margin-left: 40%;
+    }
+    #bd_video{
+        width: 100%;
+        height: 80%;
+    }
+    #texte h3{
+        width: 200px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #one{
+        display: flex;
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+}   
